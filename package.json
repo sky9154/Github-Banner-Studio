@@ -1,0 +1,38 @@
+{
+  "name": "github-banner-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "format": "bun scripts/format.ts --write",
+    "format:check": "bun scripts/format.ts --check",
+    "lint": "bun node_modules/eslint/bin/eslint.js .",
+    "lint:fix": "bun node_modules/eslint/bin/eslint.js . --fix",
+    "typecheck": "tsc --noEmit",
+    "render": "bun src/render.ts",
+    "export": "bun src/export.ts",
+    "validate": "bun src/validate.ts",
+    "logo:render": "bun src/logo.ts render",
+    "logo:export": "bun src/logo.ts export",
+    "logo:validate": "bun src/logo.ts validate",
+    "verify:logo": "bun run logo:render tests/fixtures/logo && bun run logo:export tests/fixtures/logo && bun run logo:validate tests/fixtures/logo",
+    "brand:validate": "bun src/brand-validate.ts",
+    "verify:brand": "bun run logo:render tests/fixtures/logo && bun run logo:export tests/fixtures/logo && bun run render tests/fixtures/brand/banner && bun run export tests/fixtures/brand/banner && bun run brand:validate tests/fixtures/brand",
+    "check": "bun run typecheck && bun run lint && bun run format:check && bun test",
+    "verify:fixture": "bun run render tests/fixtures/basic && bun run export tests/fixtures/basic && bun run validate tests/fixtures/basic",
+    "setup:browser": "bun node_modules/playwright/cli.js install chromium"
+  },
+  "dependencies": {
+    "playwright": "^1.58.0",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "5.10.0",
+    "@types/bun": "^1.3.0",
+    "@typescript-eslint/parser": "8.71.2",
+    "bun": "1.4.3",
+    "eslint": "10.12.0",
+    "prettier": "3.9.10",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "github-banner-studio",
+  "version": "1.0.0",
+  "description": "Create and validate GitHub repository banners, logos, and coordinated brand assets with GitHub Banner Studio.",
+  "author": {
+    "name": "GitHub Banner Studio"
+  },
+  "skills": "./.agents/skills/",
+  "interface": {
+    "displayName": "GitHub Banner Studio",
+    "shortDescription": "Create repository banners and logos",
+    "longDescription": "Analyze a user-specified GitHub or local repository read-only, then create editable README banners and repository logos. Includes dedicated Banner and Logo Skills plus a complete brand coordination workflow. Uses the Studio's local Bun rendering and validation tools. Run it from a Studio checkout with dependencies installed; outputs stay in the Studio and the source repository remains read-only.",
+    "developerName": "GitHub Banner Studio",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read-only analysis of a user-specified GitHub or local repository",
+      "Create, export, and validate README banners",
+      "Create, export, and validate repository logos",
+      "Coordinate a consistent logo and banner workflow"
+    ],
+    "composerIcon": "./assets/plugin-icon.svg",
+    "logo": "./assets/plugin-icon.svg",
+    "defaultPrompt": [
+      "Use $repository-banner to create a README banner for a specified repository",
+      "Use $repository-logo Create to create or refine a repository logo",
+      "Use $repository-brand to plan a complete logo and banner identity"
+    ]
+  }
+}
+

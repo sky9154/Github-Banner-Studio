@@ -1,0 +1,20 @@
+{
+  "name": "github-banner-studio",
+  "interface": {
+    "displayName": "GitHub Banner Studio"
+  },
+  "plugins": [
+    {
+      "name": "github-banner-studio",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}
