@@ -1,5 +1,7 @@
 # GitHub Banner Studio
 
+![GitHub Banner Studio](./docs/images/readme-banner.webp)
+
 A Codex workspace for designing GitHub README banners and repository logos. It includes three Skills and local tools for rendering, exporting, and validating assets. Source repositories remain read-only.
 
 ## Set up
